@@ -1,3 +1,41 @@
 // Place all the styles related to the goods controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.Header {
+  width: 100vw;
+  height: 100px;
+  text-align: center;
+  h1 {
+    font-size: 35px;
+    font-family: 'Verdana';
+    line-height: 100px;
+  }
+}
+
+.TopImage {
+  height: 100vh;
+  width: 100vw;
+  background-image: image-url("top_img.jpg");
+  background-size: cover;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
+}
+
+.LineUpWrapper {
+  width: 70vw;
+  margin: 30px auto;
+  h2 {
+    font-size: 25px;
+    font-family: 'Verdana';
+    text-align: center;
+  }
+  &__grid {
+    display: grid;
+    gap: 26px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 6%;
+    margin-bottom: 50px;
+  }
+}
