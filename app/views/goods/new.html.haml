@@ -1,0 +1,9 @@
+.Header
+  %h2 商品登録
+=form_with(model: @good, local: true, class: "Form") do |f|
+  =f.text_field :name, placeholder: "商品名", class: "input"
+  =f.file_field :image, class: "input imgfield"
+  =f.number_field :price, placeholder: "値段", class: "input"
+  =f.number_field :count, placeholder: "在庫数", class: "input"
+  =f.text_area :description, placeholder: "説明文", class: "input textarea"
+  =f.submit "登録", class: "loginbtn"

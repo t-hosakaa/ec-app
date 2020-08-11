@@ -4,4 +4,9 @@
 .LineUpWrapper
   %h2 lineup
   .LineUpWrapper__grid
+.Footer
+  - if session[:user_id]
+    =link_to 'ログアウト', logout_path, method: 'post'
+  - else
+    =link_to '管理者ユーザーはこちら', login_path
     

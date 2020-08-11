@@ -5,12 +5,12 @@
 
 .Header {
   width: 100vw;
-  height: 100px;
+  height: 140px;
   text-align: center;
   h1 {
     font-size: 35px;
     font-family: 'Verdana';
-    line-height: 100px;
+    line-height: 140px;
   }
 }
 
@@ -37,5 +37,16 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-top: 6%;
     margin-bottom: 50px;
+  }
+}
+
+.Footer {
+  text-align: right;
+  height: 70px;
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    line-height: 70px;
   }
 }
