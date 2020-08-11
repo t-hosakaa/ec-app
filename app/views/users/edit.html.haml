@@ -1,0 +1,8 @@
+.Header
+  %h2 管理者ユーザー編集画面
+=form_with(model: @user, local: true, class: "Form") do |f|
+  =f.text_field :name, placeholder: "ユーザー名", class: "input"
+  =f.text_field :email, placeholder: "メールアドレス", class: "input"
+  =f.text_field :password, placeholder: "パスワード", type: 'password', class: "input"
+  =f.submit '更新', class: "loginbtn"
+  =link_to 'TOPに戻る', '/', class: "backbtn"

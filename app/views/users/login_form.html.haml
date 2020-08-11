@@ -1,0 +1,8 @@
+.Header
+  %h2 管理者ログイン画面
+=form_with(action: 'users/login', local: true, method: :post, class: "Form") do |f|
+  =f.text_field :email, placeholder: 'メールアドレス', class: "input"
+  =f.text_field :password, placeholder: 'パスワード', type: 'password', class: "input"
+  =f.submit 'ログイン', class: "loginbtn"
+  =link_to '新規登録', new_user_path, class: "signupbtn"
+  =link_to 'TOPに戻る', '/', class: "backbtn"
