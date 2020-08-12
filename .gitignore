@@ -32,4 +32,4 @@ yarn-debug.log*
 
 public/uploads/*
 .env
-/config/initializers/setting.rb
+setting.rb
