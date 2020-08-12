@@ -8,6 +8,7 @@
       =image_tag(good.image.url, class: "goodImage")
 .Footer
   - if session[:user_id]
+    =link_to '各種設定', user_path(session[:user_id])
     =link_to 'ログアウト', logout_path, method: 'post'
   - else
     =link_to '管理者ユーザーはこちら', login_path
