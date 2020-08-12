@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   post 'login' => 'users#login'
   get 'logout' => 'users#logout_form'
   post 'logout' => 'users#logout'
-  resources :goods
+  resources :goods do
+    collection do
+      post 'purchase'
+    end
+  end
 end

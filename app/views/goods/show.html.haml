@@ -1,0 +1,2 @@
+= form_tag(action: :purchase, method: :post) do
+          %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}

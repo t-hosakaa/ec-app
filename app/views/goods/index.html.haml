@@ -5,7 +5,8 @@
   %h2 lineup
   .LineUpWrapper__grid
     -@goods.each do |good|
-      =image_tag(good.image.url, class: "goodImage")
+      =link_to good_path(good.id) do
+        =image_tag(good.image.url, class: "goodImage")
 .Footer
   - if session[:user_id]
     =link_to '各種設定', user_path(session[:user_id])
