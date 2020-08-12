@@ -5,7 +5,7 @@
   %h2 lineup
   .LineUpWrapper__grid
     -@goods.each do |good|
-      =link_to good_path(good.id) do
+      =link_to good_path(good.id), data: {"turbolinks" => false} do
         =image_tag(good.image.url, class: "goodImage")
 .Footer
   - if session[:user_id]

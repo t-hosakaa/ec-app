@@ -40,6 +40,27 @@
   }
 }
 
+.goodImage {
+  border-radius: 2px;
+}
+
+
+
+.Topbtn {
+  text-align: center;
+  .showbackbtn {
+    text-decoration: none;
+    color: white;
+    background-color: royalblue;
+    padding: 10px 20px;
+    margin: 50px 20px;
+    border: solid 1px rgb(66, 108, 233);
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px 1px silver;
+  }
+}
+
+
 .Footer {
   text-align: right;
   height: 70px;

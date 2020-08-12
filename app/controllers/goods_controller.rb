@@ -12,9 +12,14 @@ class GoodsController < ApplicationController
     good.save
   end
 
+  def show
+    @good = Good.find(params[:id])
+  end
+
   def purchase
+    good = Good.find(params[:id])
     Payjp.api_key = PAYJP_SECRET_KEY
-    Payjp::Charge.create(currency: 'jpy', amount: 1000, card: params['payjp-token'])
+    Payjp::Charge.create(currency: 'jpy', amount: good.price, card: params['payjp-token'])
     redirect_to root_path, notice: "支払いが完了しました"
   end
 

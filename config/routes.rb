@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'logout' => 'users#logout_form'
   post 'logout' => 'users#logout'
   resources :goods do
-    collection do
+    member do
       post 'purchase'
     end
   end

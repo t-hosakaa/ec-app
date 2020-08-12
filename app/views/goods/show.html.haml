@@ -1,2 +1,13 @@
-= form_tag(action: :purchase, method: :post) do
-          %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
+.GoodShow
+  = image_tag(@good.image.url, class: "goodImage")
+  .GoodContent
+    %h3
+      = @good.name
+    %p.GoodDescription
+      = @good.description
+    %p.GoodPrice
+      = "¥#{@good.price}"
+    = form_tag(action: :purchase, method: :post) do
+      %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
+.Topbtn
+  =link_to '←TOPに戻る', root_path, class: "showbackbtn"
