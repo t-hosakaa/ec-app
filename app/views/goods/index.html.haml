@@ -1,16 +1,29 @@
 .Header
+  %nav.nav#nav_f
+    %ul
+      %li 
+        商品ラインナップ
+      %li 
+        =link_to '検索する', '#'
+      - if session[:user_id]
+        %li
+          =link_to '各種設定', user_path(session[:user_id])
+      - else
+        %li 
+          =link_to '管理者ログイン', login_path
+      %li
+        =link_to 'TOPに戻る', root_path
+  #target
+    .target_inner
+      %span.target_inner_line.target_inner_1#line1
+      %span.target_inner_line.target_inner_2#line2
+      %span.target_inner_line.target_inner_3#line3
   %h1 EC-app.
 #TopImage
-  -# = image_tag 'pic_1.jpg', id: "mypic", class: "TopImg"
+  = image_tag 'pic_5.jpg', id: "mypic", class: "TopImg"
 .LineUpWrapper
   %h2 lineup
   .LineUpWrapper__grid
     -@goods.each do |good|
       =link_to good_path(good.id), data: {"turbolinks" => false} do
         =image_tag(good.image.url, class: "goodImage")
-.Footer
-  - if session[:user_id]
-    =link_to '各種設定', user_path(session[:user_id])
-    =link_to 'ログアウト', logout_path, method: 'post'
-  - else
-    =link_to '管理者ユーザーはこちら', login_path

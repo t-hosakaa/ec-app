@@ -1,15 +1,19 @@
 'use strict'
-// const pics_src = ["pic_1.jpg", "pic_2.jpg", "pic_3.jpg", "pic_4.jpg"];
-// let mypic = document.getElementById('mypic');
-// let num = -1
+window.onload = function(){
+  // トップ画像のスライドショー処理（image_pathが使えない・・・保留）
+  // const pics_src = ["pic_1.jpg", "pic_2.jpg", "pic_3.jpg", "pic_4.jpg"];
+  // let mypic = document.getElementById('mypic');
+  // let num = -1
 
-// function slideshow_timer() {
-//   if (num === 3){
-//     num = 0;
-//   } else {
-//     num ++;
-//   }
-//   mypic.image_path(pics_src[num]);
-// }
+  // function slideshow_timer() {
+  //   if (num === 3){
+  //     num = 0;
+  //   } else {
+  //     num ++;
+  //   }
+  //   mypic.image_path(pics_src[num]);
+  // }
 
-// setInterval(slideshow_timer, 3000);
+  // setInterval(slideshow_timer, 3000);
+
+}

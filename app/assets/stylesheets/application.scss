@@ -23,8 +23,8 @@ html {
 
 .GoodShow {
   width: 300px;
-  margin: 50px auto;
-  padding: 60px;
+  margin: 100px auto;
+  padding: 40px;
   background-color: white;
   border: solid 1px rgb(209, 209, 209);
   border-radius: 4px;
@@ -32,6 +32,107 @@ html {
 }
 
 #payjp_checkout_box {
+  margin-top: 30px;
   text-align: center;
   display: block;
+}
+
+.nav{
+  position: absolute;
+  height: 300px;
+  width: 200px;
+  top: 40px;
+  right: 100%;
+  background: rgba(224, 220, 220, 0.8);
+  -webkit-transition: 1s;
+  transition: 1s;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px 1px silver;
+}
+
+ul{
+  margin: 0;
+  padding: 50px;
+  text-align: left;
+}
+
+li{
+  list-style-type: none;
+  font-size: 12px;
+  border-bottom: solid 1px silver;
+  padding: 10px 0;
+  margin: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+/* hamburger_line */
+#target {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 55px;
+  left: 20px;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.target_inner{
+  width: 40px;
+  height: 30px;
+  position: relative;
+}
+
+.target_inner_line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  background: #636363;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  border-radius: 50px;
+  position: absolute;
+}
+
+.target_inner_1 {
+  top: 0;
+}
+
+.target_inner_2 {
+  top: 13px;
+}
+
+.target_inner_3 {
+  top: 26px;
+}
+
+.fadein{
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.linea,.lineb,.linec{
+  background: #ffffff;
+}
+
+.linea {
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+  top: 13px;
+}
+
+.lineb {
+  opacity: 0;
+}
+
+.linec {
+  -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+  top: 13px;
 }

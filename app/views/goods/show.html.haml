@@ -1,3 +1,18 @@
+%nav.nav#nav_f
+  %ul
+    %li 
+      商品ラインナップ
+    %li 
+      =link_to '検索する', '#'
+    %li 
+      =link_to '管理者ユーザー', login_path
+    %li
+      =link_to 'TOPに戻る', root_path
+#target
+  .target_inner
+    %span.target_inner_line.target_inner_1#line1
+    %span.target_inner_line.target_inner_2#line2
+    %span.target_inner_line.target_inner_3#line3
 .GoodShow
   = image_tag(@good.image.url, class: "goodImage")
   .GoodContent
@@ -9,5 +24,3 @@
       = "¥#{@good.price}"
     = form_tag(action: :purchase, method: :post) do
       %script.payjp-button{"data-key" => "#{PAYJP_PUBLIC_KEY}", :src => "https://checkout.pay.jp", :type => "text/javascript"}
-.Topbtn
-  =link_to '←TOPに戻る', root_path, class: "showbackbtn"

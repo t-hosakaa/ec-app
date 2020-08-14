@@ -6,7 +6,10 @@
 .Header {
   width: 100vw;
   height: 140px;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  // position: fixed;
   h1 {
     font-size: 35px;
     font-family: 'Verdana';
@@ -17,10 +20,10 @@
 #TopImage {
   height: 100vh;
   width: 100vw;
-  background-image: image-url("pic_5.jpg");
+  // background-image: image-url("pic_5.jpg");
   background-size: cover;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
+  // border-top: solid 1px black;
+  // border-bottom: solid 1px black;
   .TopImg {
     height: 100vh;
     width: 100vw;
@@ -46,6 +49,7 @@
 
 .goodImage {
   border-radius: 2px;
+  box-shadow: 1px 1px 4px 1px silver;
 }
 
 
