@@ -1,6 +1,8 @@
-'use strict'
+'use strict';
 
 window.onload = function(){
+  
+  // ハンバーガーメニュー
   function hamburger() {
     document.getElementById('line1').classList.toggle('linea');
     document.getElementById('line2').classList.toggle('lineb');
@@ -20,4 +22,12 @@ window.onload = function(){
     hamburger();
         });
     }
+  
+
+  // lineupへのスクロール
+  const lineUpBtn = document.getElementById('lineUpBtn');
+  lineUpBtn.addEventListener('click', function(){
+    const LineUpWrapper = document.getElementById('LineUpWrapper').getBoundingClientRect().top;
+    scroll({top: LineUpWrapper - 20, behavior: "smooth"});
+  })
 }

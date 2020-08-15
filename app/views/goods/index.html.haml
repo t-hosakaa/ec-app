@@ -1,7 +1,7 @@
-.Header
+.Header#Top
   %nav.nav#nav_f
     %ul
-      %li 
+      %li#lineUpBtn
         商品ラインナップ
       %li 
         =link_to '検索する', '#'
@@ -21,7 +21,7 @@
   %h1 EC-app.
 #TopImage
   = image_tag 'pic_5.jpg', id: "mypic", class: "TopImg"
-.LineUpWrapper
+.LineUpWrapper#LineUpWrapper
   %h2 lineup
   .LineUpWrapper__grid
     -@goods.each do |good|
