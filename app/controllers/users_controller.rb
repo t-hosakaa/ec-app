@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  before_action :nologin_user, {only: [:edit, :update, :logout_form]}
+  before_action :noauthority_user, {only: [:show, :edit, :update, :logout_form]}
+
   def new
     @user = User.new
   end
@@ -12,7 +15,7 @@ class UsersController < ApplicationController
       flash[:notice] = "新規登録しました"
     else
       render :new
-      flash[:alert] = "登録に失敗しました" 
+      flash[:alert] = "登録に失敗しました"
     end
   end
 
@@ -40,13 +43,13 @@ class UsersController < ApplicationController
   end
 
   def login
-    user = User.find_by(email: params[:email])
-    if user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to "/users/#{user.id}"
+    @user = User.find_by(email: params[:email])
+    if @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to root_path
       flash[:notice] = "ログインしました"
     else
-      render '/login'
+      render :login_form
       flash[:alert] = "ログインに失敗しました"
     end
   end

@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  // position: fixed;
   h1 {
     font-size: 35px;
     font-family: 'Verdana';
@@ -20,10 +19,9 @@
 #TopImage {
   height: 100vh;
   width: 100vw;
-  // background-image: image-url("pic_5.jpg");
   background-size: cover;
-  // border-top: solid 1px black;
-  // border-bottom: solid 1px black;
+  border-top: solid 1px black;
+  border-bottom: solid 1px black;
   .TopImg {
     height: 100vh;
     width: 100vw;

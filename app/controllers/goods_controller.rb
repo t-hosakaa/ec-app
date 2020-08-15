@@ -1,4 +1,7 @@
 class GoodsController < ApplicationController
+
+  before_action :nologin_user, only: [:new, :create]
+
   def index
     @goods = Good.all
   end
