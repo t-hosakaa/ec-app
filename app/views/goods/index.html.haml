@@ -8,6 +8,8 @@
       - if session[:user_id]
         %li
           =link_to '各種設定', user_path(session[:user_id])
+        %li
+          =link_to 'ログアウト', logout_path, method: 'post'
       - else
         %li 
           =link_to '管理者ログイン', login_path
@@ -20,7 +22,7 @@
       %span.target_inner_line.target_inner_3#line3
   %h1 EC-app.
 #TopImage
-  = image_tag 'pic_5.jpg', id: "mypic", class: "TopImg"
+  = image_tag 'pic_6.jpg', id: "mypic", class: "TopImg"
 .LineUpWrapper#LineUpWrapper
   %h2 lineup
   .LineUpWrapper__grid

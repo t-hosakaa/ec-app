@@ -1,3 +1,7 @@
+.TopBack
+  =link_to root_path, class: "topicon" do
+    %icon.fas.fa-arrow-left
+  %span.toptext TOPに戻る
 .Header
   %h2 商品登録
 =form_with(model: @good, local: true, class: "Form") do |f|
@@ -7,4 +11,3 @@
   =f.number_field :count, placeholder: "在庫数", class: "input"
   =f.text_area :description, placeholder: "説明文", class: "input textarea"
   =f.submit "登録", class: "loginbtn"
-  =link_to 'TOPに戻る', '/', class: "backbtn"

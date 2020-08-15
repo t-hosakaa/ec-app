@@ -8,5 +8,8 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application'
   %body
+    .notifications
+      - flash.each do |key, value|
+        %p{class: key}= value
     = yield
     

@@ -1,19 +1,8 @@
+.TopBack
+  =link_to root_path, class: "topicon" do
+    %icon.fas.fa-arrow-left
+  %span.toptext TOPに戻る
 .Header
-  %nav.nav#nav_f
-    %ul
-      %li 
-        商品ラインナップ
-      %li 
-        =link_to '検索する', '#'
-      %li 
-        =link_to '管理者ユーザー', login_path
-      %li
-        =link_to 'TOPに戻る', root_path
-  #target
-    .target_inner
-      %span.target_inner_line.target_inner_1#line1
-      %span.target_inner_line.target_inner_2#line2
-      %span.target_inner_line.target_inner_3#line3
   %h2 管理者ログインフォーム
 =form_with(action: 'users/login', local: true, method: :post, class: "Form") do |f|
   =f.text_field :email, placeholder: 'メールアドレス', class: "input"

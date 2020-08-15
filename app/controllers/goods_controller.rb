@@ -8,10 +8,12 @@ class GoodsController < ApplicationController
   end
 
   def create
-    good = Good.new(good_params)
-    if good.save
+    @good = Good.new(good_params)
+    if @good.save
       redirect_to root_path
+      flash[:notice] = "商品を登録しました"
     else
+      flash[:alert] = "商品登録に失敗しました"
       render :new
     end
   end

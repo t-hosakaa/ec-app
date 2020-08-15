@@ -1,3 +1,7 @@
+.TopBack
+  =link_to root_path, class: "topicon" do
+    %icon.fas.fa-arrow-left
+  %span.toptext TOPに戻る
 .Header
   %h2 管理者ユーザー登録画面
 =form_with(model: @user, local: true, method: :post, class: "Form") do |f|

@@ -5,12 +5,14 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.new(user_params)
-    if user.save
-      session[:user_id] = user.id
-      redirect_to "/users/#{user.id}"
+    @user = User.new(user_params)
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to "/users/#{@user.id}"
+      flash[:notice] = "新規登録しました"
     else
       render :new
+      flash[:alert] = "登録に失敗しました" 
     end
   end
 
@@ -23,11 +25,13 @@ class UsersController < ApplicationController
   end
 
   def update
-    user = User.find(params[:id])
-    if user.update(user_params)
-      redirect_to "/users/#{user.id}"
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      redirect_to "/users/#{@user.id}"
+      flash[:notice] = "更新しました"
     else
-      render 
+      render :edit
+      flash[:alert] = "更新に失敗しました"
     end
   end
 
@@ -40,8 +44,10 @@ class UsersController < ApplicationController
     if user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect_to "/users/#{user.id}"
+      flash[:notice] = "ログインしました"
     else
       render '/login'
+      flash[:alert] = "ログインに失敗しました"
     end
   end
 
@@ -50,7 +56,8 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to '/logout'
+    redirect_to root_path
+    flash[:notice] = "ログアウトしました"
   end
 
   private

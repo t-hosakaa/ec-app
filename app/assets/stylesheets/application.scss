@@ -21,6 +21,31 @@ html {
   background-color: #F5F3ED;
 }
 
+.notifications {
+  text-align: center;
+  .notice {
+    line-height: 60px;
+    background-color: skyblue;
+  }
+  .alert {
+    line-height: 60px;
+    background-color: rgb(216, 76, 76);
+    color: white;
+  }
+}
+
+.TopBack {
+  padding-left: 20px;
+  display: flex;
+  .topicon {
+    font-size: 30px;
+  }
+  .toptext {
+    line-height: 45px;
+    margin-left: 5px;
+  }
+}
+
 .GoodShow {
   width: 300px;
   margin: 100px auto;
@@ -48,6 +73,10 @@ html {
   transition: 1s;
   border-radius: 4px;
   box-shadow: 1px 1px 4px 1px silver;
+}
+
+#lineUpBtn {
+  cursor: pointer;
 }
 
 ul{
