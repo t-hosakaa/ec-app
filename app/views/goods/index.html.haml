@@ -4,7 +4,7 @@
       %li#lineUpBtn
         商品ラインナップ
       %li 
-        =link_to '検索する', '#'
+        =link_to '検索する', search_goods_path
       - if session[:user_id]
         %li
           =link_to '各種設定', user_path(session[:user_id])

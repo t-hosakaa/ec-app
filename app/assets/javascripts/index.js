@@ -1,19 +1,37 @@
-'use strict'
 window.onload = function(){
-  // トップ画像のスライドショー処理（image_pathが使えない・・・保留）
-  // const pics_src = ["pic_1.jpg", "pic_2.jpg", "pic_3.jpg", "pic_4.jpg"];
-  // let mypic = document.getElementById('mypic');
-  // let num = -1
+  // ハンバーガーメニュー
+  function hamburger() {
+    document.getElementById('line1').classList.toggle('linea');
+    document.getElementById('line2').classList.toggle('lineb');
+    document.getElementById('line3').classList.toggle('linec');
+    document.getElementById('target').classList.toggle('slidex');
+    document.getElementById('nav_f').classList.toggle('fadein');
+    }
+    
+    document.getElementById('target').addEventListener('click', function () {
+    hamburger();
+    });
+    
+    let list = document.getElementsByClassName('list');
+    
+    for (let i = 0; i < list.length; i++) {
+    list[i].addEventListener('click', function () {
+    hamburger();
+        });
+    }
+  
 
-  // function slideshow_timer() {
-  //   if (num === 3){
-  //     num = 0;
-  //   } else {
-  //     num ++;
-  //   }
-  //   mypic.image_path(pics_src[num]);
-  // }
-
-  // setInterval(slideshow_timer, 3000);
-
+  // lineupへのスクロール
+  const lineUpBtn = document.getElementById('lineUpBtn');
+  lineUpBtn.addEventListener('click', function(){
+    const LineUpWrapper = document.getElementById('LineUpWrapper').getBoundingClientRect().top;
+    scroll({top: LineUpWrapper - 20, behavior: "smooth"});
+  });
 }
+  
+
+  
+
+  
+  
+  

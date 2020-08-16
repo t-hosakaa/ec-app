@@ -66,6 +66,22 @@
   }
 }
 
+.SearchContent {
+  width: 70%;
+  margin: 10px auto;
+  text-align: center;
+  #SearchBox__input {
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    box-shadow: 0px 1px 5px 1px gray;
+  }
+  .NoFoundMsg {
+    margin-top: 50px;
+    font-size: 30px;
+  }
+}
+
 
 .Footer {
   text-align: right;

@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     member do
       post 'purchase'
     end
+
+    collection do
+      get 'search'
+    end
   end
 end

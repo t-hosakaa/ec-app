@@ -32,6 +32,14 @@ class GoodsController < ApplicationController
     redirect_to root_path, notice: "支払いが完了しました"
   end
 
+  def search
+    @goods = Good.search(params[:keyword])
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   private
 
   def good_params
